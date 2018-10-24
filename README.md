@@ -3,3 +3,5 @@
 <p>The major difference between RabbitMQ and the post office is that it doesn't deal with paper, instead it accepts, stores and forwards binary blobs of data ‒ messages.</p><br>
 
 <img src="https://raw.githubusercontent.com/amitpatange88/icons/master/RabbitMQ-interface-localmachine-01.png">
+<br>
+<img src="https://raw.githubusercontent.com/amitpatange88/icons/master/RabbitMQ-overview-02.png">
