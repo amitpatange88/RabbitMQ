@@ -22,7 +22,7 @@ namespace RabbitMQ
                     callback.Invoke(message);
                 };
 
-                channel.BasicConsume(queue: RabbitConstants.Queue,
+                var x = channel.BasicConsume(queue: RabbitConstants.Queue,
                                         autoAck: true,
                                         consumer: consumer);
 

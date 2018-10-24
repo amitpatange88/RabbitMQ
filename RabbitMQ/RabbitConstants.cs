@@ -9,5 +9,7 @@ namespace RabbitMQ
     internal class RabbitConstants
     {
         internal static string Queue = "HostLive-TestQueue-v1";
+
+        internal static string RoutingKey = Queue;
     }
 }

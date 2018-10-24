@@ -9,7 +9,7 @@ using static RabbitMQ.Program;
 
 namespace RabbitMQ
 {
-    public class RabbitMQ
+    public class RabbitMQ : IDisposable
     {
         //Default username and password are guest for RabbitMQ.
         private const string ConnectionString = "host=localhost;username;guest;password=guest;";
@@ -22,7 +22,12 @@ namespace RabbitMQ
             this.CloseConnection();
         }
 
-        public IModel CreateConnection()
+        public void Dispose()
+        {
+            this.CloseConnection();
+        }
+
+        private IModel CreateConnection()
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             this._connection = factory.CreateConnection();
@@ -31,10 +36,10 @@ namespace RabbitMQ
             return _channel; 
         }
 
-        public void CloseConnection()
+        private void CloseConnection()
         {
-            this._connection.Close();
             this._channel.Close();
+            this._connection.Close();
         }
 
         /// <summary>

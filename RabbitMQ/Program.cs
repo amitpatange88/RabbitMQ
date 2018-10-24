@@ -15,15 +15,11 @@ namespace RabbitMQ
         {
             Program p = new Program();
             _callback = new _CallbackConsumerDel(p.OnConsumeMessage);
-            RabbitMQ Rpc = new RabbitMQ();
-            Rpc.CreateConnection();
-
-            Rpc.MessageBrokerPublish("This is third message.");
-            Rpc.MessageBrokerPublish("This is fourth message.");
-            Rpc.MessageBrokerPublish("This is fifth message.");
-
-            Rpc.MessageBrokerConsume(_callback);
-
+            using(RabbitMQ Rpc = new RabbitMQ())
+            {
+                Rpc.MessageBrokerPublish("This is test message created using RabbitMQ message broker.");
+                Rpc.MessageBrokerConsume(_callback);
+            }
 
             Console.ReadKey();
         }
