@@ -7,3 +7,6 @@ C:\E\VS-Programs\RabbitMQ\RabbitMQ\bin\Debug\Microsoft.Diagnostics.Tracing.Event
 C:\E\VS-Programs\RabbitMQ\RabbitMQ\bin\Debug\RabbitMQ.Client.xml
 C:\E\VS-Programs\RabbitMQ\RabbitMQ\obj\Debug\RabbitMQ.exe
 C:\E\VS-Programs\RabbitMQ\RabbitMQ\obj\Debug\RabbitMQ.pdb
+C:\E\VS-Programs\RabbitMQ\RabbitMQ\bin\Debug\Newtonsoft.Json.dll
+C:\E\VS-Programs\RabbitMQ\RabbitMQ\bin\Debug\Newtonsoft.Json.xml
+C:\E\VS-Programs\RabbitMQ\RabbitMQ\obj\Debug\RabbitMQ.csprojResolveAssemblyReference.cache
