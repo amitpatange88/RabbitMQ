@@ -51,7 +51,7 @@
     <Compile Include="Consumer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publisher.cs" />
+    <Compile Include="Producer.cs" />
     <Compile Include="RabbitConstants.cs" />
     <Compile Include="RabbitMQ.cs" />
     <Compile Include="SystemDetails.cs" />

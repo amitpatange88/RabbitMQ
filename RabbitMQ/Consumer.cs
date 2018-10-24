@@ -2,12 +2,13 @@
 using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using static RabbitMQ.Program;
 
 namespace RabbitMQ
 {
     internal class Consumer
     {
-        internal void ConsumeMessage(IModel channel, Delegate callback)
+        internal void ConsumeMessage(IModel channel, _CallbackConsumerDel callback)
         {
             try
             {
@@ -17,7 +18,8 @@ namespace RabbitMQ
                 {
                     var body = ea.Body;
                     var message = Encoding.UTF8.GetString(body);
-                    OnConsumeMessage(message);
+                    //OnConsumeMessage(message);
+                    callback.Invoke(message);
                 };
 
                 channel.BasicConsume(queue: RabbitConstants.Queue,
@@ -32,9 +34,9 @@ namespace RabbitMQ
             }
         }
 
-        public void OnConsumeMessage(string message)
-        {
-            Console.WriteLine(" [x] Received {0}", message);
-        }
+        //public void OnConsumeMessage(string message)
+        //{
+        //    Console.WriteLine(" [x] Received {0}", message);
+        //}
     }
 }

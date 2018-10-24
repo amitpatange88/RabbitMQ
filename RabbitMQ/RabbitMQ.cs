@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using static RabbitMQ.Program;
 
 namespace RabbitMQ
 {
@@ -53,14 +54,16 @@ namespace RabbitMQ
         {
             Producer Rp = new Producer();
             this.CreateConnection();
+            DeclareQueue(_channel);
             Rp.PublishMessage(_channel, message);
         }
 
-        public void MessageBrokerConsume(string message)
+        public void MessageBrokerConsume(_CallbackConsumerDel callback)
         {
             Consumer Rc = new Consumer();
             this.CreateConnection();
-            Rc.ConsumeMessage(_channel, delegate callback);
+            DeclareQueue(_channel);
+            Rc.ConsumeMessage(_channel, callback);
         }
     }
 }
