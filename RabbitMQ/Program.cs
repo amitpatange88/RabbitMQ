@@ -23,7 +23,9 @@ namespace RabbitMQ
             using (RabbitMQ Rpc = new RabbitMQ())
             {
                 Rpc.MessageBrokerPublish(systemLog);
-                Rpc.MessageBrokerConsume(_callback);
+                Rpc.MessageBrokerPublish(systemLog);
+                Rpc.MessageBrokerPublish(systemLog);
+                //Rpc.MessageBrokerConsume(_callback);
             }
 
             Console.ReadKey();

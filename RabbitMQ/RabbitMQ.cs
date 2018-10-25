@@ -49,7 +49,7 @@ namespace RabbitMQ
         public void DeclareQueue(IModel channel)
         {
             channel.QueueDeclare(queue: RabbitConstants.Queue,
-                                     durable: false,
+                                     durable: true,
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: null);

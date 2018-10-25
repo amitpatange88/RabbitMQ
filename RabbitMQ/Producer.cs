@@ -13,9 +13,12 @@ namespace RabbitMQ
             {
                 var body = Encoding.UTF8.GetBytes(message);
 
+                IBasicProperties props = channel.CreateBasicProperties();
+                props.DeliveryMode = 2;
+
                 channel.BasicPublish(exchange: "",
                                         routingKey: RabbitConstants.RoutingKey,
-                                        basicProperties: null,
+                                        basicProperties: props,
                                         body: body);
                 Console.WriteLine(" [x] Sent {0}", message);
 
