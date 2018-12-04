@@ -5,4 +5,5 @@
 <br>
 <img src="https://raw.githubusercontent.com/amitpatange88/icons/master/RabbitMQ-interface-localmachine-01.png">
 <br>
-<img src="https://raw.githubusercontent.com/amitpatange88/icons/master/RabbitMQ-overview-02.png">
+<img src="https://raw.githubusercontent.com/amitpatange88/icons/master/RabbitMQ-overview-02.png"><br>
+RabbitMQ is the most widely deployed open source message broker.
